@@ -19,14 +19,10 @@
   [L]
   (if (empty? L)
     0
-    (+ 
-       (first 
-        (first L))
-      (my-sum3 
-        (rest L)
-        )
-      )
+    (+ (first (first L))
+       (my-sum3 (rest L))
     )
   )
+)
 
 (print (my-sum3 '((1 Anne) (2 Frank) (3 Stew))) \newline)
