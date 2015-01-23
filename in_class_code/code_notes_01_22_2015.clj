@@ -1,3 +1,6 @@
+;@author : George Petersen
+;@file : code_notes_01_22_2015.clj
+
 (defn eyear? 
   [yr] 
   (= (mod yr 4) 0))
@@ -18,11 +21,16 @@
 (defn my-sum3
   [L]
   (if (empty? L)
+    ;if list is empty add zero and close
     0
+    
+    ; if there is an element, get the first element,
+    ; which is a list and take that list's first element
+    ; which is a number and sum them. 
     (+ (first (first L))
        (my-sum3 (rest L))
     )
   )
 )
 
-(print (my-sum3 '((1 Anne) (2 Frank) (3 Stew))) \newline)
+(pp (my-sum3 '((1 Anne) (2 Frank) (3 Stew))) \newline)
