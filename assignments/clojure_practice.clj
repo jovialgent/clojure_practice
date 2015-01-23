@@ -10,8 +10,6 @@
 ; @function: my-max
 ; @arguments : L - list of numbers
 ; @return: this max value in a list or -1 if empty
-
-
 (defn my-max
   [L] ; list of numbers
 
@@ -40,7 +38,6 @@
 ; @function: even-sum
 ; @arguments: L - list of numbers
 ; @return: this sum of all even numbers
-
 (defn even-sum
   [L] ;list of numbers
   
@@ -62,7 +59,6 @@
 ; @function: all-pos
 ; @argument: List of numbers
 ; @return: True if all numbers in this argument is positive
-
 (defn all-pos
   [L] ; list of numbers
   
