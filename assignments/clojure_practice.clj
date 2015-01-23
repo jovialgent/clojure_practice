@@ -29,13 +29,37 @@
   (if (empty? L)
     ;returns if list is empty
    -1
-   (+ 3 4)))
+   (if (= (count L) 1)
+     (first L)
+     (if (> (first L) (first (rest L)))
+       (my-max (conj (rest (rest L)) (first L)))
+       (my-max (rest L))
+     )
+   )))
 
 
 ; Tests for my-max
+(print "*** Start of my-max Tests ***\n" \newline)
 
 ; Test 1: If list is empty return -1
-(print "My Max Test 1" (= (my-max '()) -1) \newline)
+(print "Empty list return -1: "(= (my-max '()) -1)\newline)
 
-; Test 2: In list (2 7 3 11 5 1 6) return 11
-(print "My Max Test 2" (= (my-max '(2 7 3 11 5 1 6)) 11) \newline)
+; Test 2: If list is '(4) then return 4
+(print "List length is one, return first element: " (= (my-max '(4)) 4) \newline)
+
+; Test 3: In list (2 7 3 11 5 1 6) return 11
+(print "In a list '(2 7 3 11 5 1 6), it should return 11: " (= (my-max '(2 7 3 11 5 1 6)) 11) \newline \newline)
+
+
+(print "*** End of my-max Tests ***"\newline\newline)
+
+; Tests for even-sum
+(print "*** Start of even-sum Tests ***\n" \newline)
+
+(print "*** End of even-sum Tests ***"\newline\newline)
+
+; Tests for all-pos?
+(print "*** Start of all-pos? Tests ***\n" \newline)
+
+(print "*** End of all-pos? Tests ***"\newline\newline)
+
