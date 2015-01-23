@@ -16,3 +16,26 @@
 ; true
 
 ; Due (the start of class) on Tuesday, 1/27/2015
+
+; Takes a list of numbers and returns the largest value. If there 
+; is no list return -1
+; @function: my-max
+; @arguments : L - list of numbers
+; @return: return the max value in a list or -1 if empty
+
+
+(defn my-max
+  [L]
+  (if (empty? L)
+    ;returns if list is empty
+   -1
+   (+ 3 4)))
+
+
+; Tests for my-max
+
+; Test 1: If list is empty return -1
+(print "My Max Test 1" (= (my-max '()) -1) \newline)
+
+; Test 2: In list (2 7 3 11 5 1 6) return 11
+(print "My Max Test 2" (= (my-max '(2 7 3 11 5 1 6)) 11) \newline)
