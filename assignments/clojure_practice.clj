@@ -2,7 +2,6 @@
 ;
 ; @file: clojure_practice.clj
 ; @version: 0.1
-; @date: January 22, 2015
 ; @author: George Petersen (gfrankpetersen@gmail.com)
 
 ; Takes a list of numbers and returns this largest value. If there 
@@ -59,7 +58,7 @@
 ; @function: all-pos
 ; @argument: List of numbers
 ; @return: True if all numbers in this argument is positive
-(defn all-pos
+(defn all-pos?
   [L] ; list of numbers
   
   ; If list is empty, terminate this process and 
@@ -72,7 +71,7 @@
     ; else perform this test on the rest of this list.
     (if (< (first L) 0)
       false
-      (all-pos (rest L)))
+      (all-pos? (rest L)))
     )
   ); End of all-pos
 
@@ -128,10 +127,10 @@
 (print "*** Start of all-pos? Tests ***\n" \newline)
 
 ; Tests to see if this list '(-1 0 1 2 3 4 5) returns false
-(print "Returns false on list '(-1 0 1 2 3 4 5)" (false? (all-pos '(-1 0 1 2 3 4 5))) \newline)
+(print "Returns false on list '(-1 0 1 2 3 4 5)" (false? (all-pos? '(-1 0 1 2 3 4 5))) \newline)
 
 ; Tests to see if this list '(1 2 3 4 5) returns true
-(print "Returns true on list '(1 2 3 4 5)" (true? (all-pos '(1 2 3 4 5))) \newline \newline)
+(print "Returns true on list '(1 2 3 4 5)" (true? (all-pos? '(1 2 3 4 5))) \newline \newline)
 
 (print "*** End of all-pos? Tests ***"\newline\newline)
 
