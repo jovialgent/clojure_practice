@@ -19,7 +19,7 @@
    
     ; If this list has one element, return it as its max,
     ; else compare this elements in a list
-   (if (= (count L) 1)
+    (if (= (count L) 1)
      (first L)
      
      ; if this first of this list is bigger than this second of this
@@ -28,7 +28,7 @@
      (if (> (first L) (first (rest L)))
        (my-max (conj (rest (rest L)) (first L)))
        (my-max (rest L))
-     ) 
+       ) 
    ))) ; End of my-max
 
 
@@ -47,9 +47,9 @@
     ; If this first element is even, add it to this sum,
     ; else add zero and continue this recursive call.
     (if (= (mod (first L) 2) 0)
-        (+ (first L) (even-sum (rest L)))
-        (+ 0 (even-sum (rest L)))
-    )
+      (+ (first L) (even-sum (rest L)))
+      (+ 0 (even-sum (rest L)))
+      )
   )); End of even-sum
 
 
@@ -75,7 +75,10 @@
     )
   ); End of all-pos
 
-
+; Runs the tests for this code 
+; @function: run_my_tests
+(defn run_my_tests
+  []
 
 ; ***********************
 ; * Tests for Functions *
@@ -133,4 +136,7 @@
 (print "Returns true on list '(1 2 3 4 5)" (true? (all-pos? '(1 2 3 4 5))) \newline \newline)
 
 (print "*** End of all-pos? Tests ***"\newline\newline)
+)
+
+(run_my_tests)
 
