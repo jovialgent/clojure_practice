@@ -1,10 +1,6 @@
 # clojure1
 
-A Clojure library designed to ... well, that part is up to you.
-
-## Usage
-
-FIXME
+These are the answers to my first clojure assignment for class.
 
 ## License
 
