@@ -23,12 +23,16 @@
   	(deftest test-delete-all-at
     	(testing "Return the list if no arguments given"
        		(is (= L (delete-all-at L))))
+      (testing "If list is empty, return an empty list"
+          (is (empty? (delete-all-at '() 0 1 2 3 4))))
+      (testing "If any index is more than the count of this list, return L"
+          (is (= '(0 1 3) (delete-all-at L  2 4 5 99))))
      	(testing "If all args are negative, return list"
         	(is (= L (delete-all-at L -1 -2 -3 -4))))
     	(testing "Remove the first element with args being 0"
        		(is (= '(1 2 3 4 5) (delete-all-at L 0))))
      	(testing "Remove the first and second element with args being (0, 1)"
-       		(is (= '(2 3 4 5) (delete-all-at L 0 1))))
+       		(is (= '(0 3 4 5) (delete-all-at L 1 2))))
       	(testing "Removing all the items returns an empty list"
          	(is (empty? (delete-all-at L 0 1 2 3 4 5))))
        	(testing "Removing items in non cardinal order"
@@ -49,6 +53,8 @@
         (testing "Returns '(Apple (0 1 2 3) ((0 2 3) 4) Andrew) in mixed lists"
           (is (= '("Apple" (0 1 2 3) ((0 2 3) 4) "Andrew") (similar L-mixed L-mixed-pair))))
    	 )
+    
+    
     
     (deftest test-has-el?
       (testing "Has el returns true for 0 in list (0 1 2 3)"
