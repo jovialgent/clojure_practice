@@ -1,3 +1,11 @@
+;; George Petersen
+;; 2/3/2014
+;; 
+;; This is all the answers and code for assignment for 
+;; CS 3210: Principles of programming languages. 
+
+
+
 (ns clojure1.core)
 
 ;; ================
