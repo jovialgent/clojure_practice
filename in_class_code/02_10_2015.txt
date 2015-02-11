@@ -1,0 +1,37 @@
+String -> As a primitive
+-Internally is represented by an array with a null terminator
+-Number of character length
+
+SNOBOL -> Used for string processing. 
+
+Strings are a link list
+
+
+search 
+
+SPAN moves ahead while skipped chars in the set
+
+i=0;
+
+while(b[i] === a[i]) i++; OR while(b[i] === a[i++]) => C
+
+Semaphores - To get in and out of critical sections
+
+P
+
+V 
+
+
+pointers
+
+p = f253sdflkjsd
+
+p = p + 5
+
+i = p - q
+
+
+Static Variables:
+
+Bound to memory locations before execution begins lasts until execution terminates
+
